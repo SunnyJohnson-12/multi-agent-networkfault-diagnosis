@@ -1,0 +1,53 @@
+{
+  "scenario_id": "scenario_03_overload",
+  "name": "Academic Distribution Switch CPU/Memory Exhaustion",
+  "description": "Runaway routing table flapping and high SNMP polling causing 92% CPU and 89% RAM saturation on ACAD_DIST_SW_02.",
+  "expected_fault": "Device Control Plane Overload (CPU/Memory)",
+  "incident_id": "INC-3003",
+  "telemetry": [
+    {
+      "device_id": "ACAD_DIST_SW_02",
+      "device_name": "Academic Block Distribution Switch",
+      "device_type": "switch",
+      "interface": "TenGig1/1/1",
+      "timestamp": "2026-10-31T11:30:00Z",
+      "latency_ms": 78.0,
+      "jitter_ms": 12.0,
+      "packet_loss_pct": 1.2,
+      "throughput_mbps": 280.0,
+      "bandwidth_capacity_mbps": 10000.0,
+      "link_utilization_pct": 28.0,
+      "cpu_utilization_pct": 92.5,
+      "memory_utilization_pct": 89.0,
+      "interface_status": "up",
+      "queue_drops": 0,
+      "crc_errors": 0,
+      "baseline": {
+        "baseline_latency_ms": 3.5,
+        "baseline_jitter_ms": 0.8,
+        "baseline_packet_loss_pct": 0.0,
+        "baseline_link_utilization_pct": 25.0,
+        "baseline_cpu_utilization_pct": 22.0,
+        "baseline_memory_utilization_pct": 38.0
+      }
+    },
+    {
+      "device_id": "ACAD_LAB_SW_03",
+      "device_name": "CS Computer Lab Switch",
+      "device_type": "switch",
+      "interface": "GigabitEthernet0/1",
+      "timestamp": "2026-10-31T11:30:00Z",
+      "latency_ms": 82.0,
+      "jitter_ms": 14.0,
+      "packet_loss_pct": 1.4,
+      "throughput_mbps": 95.0,
+      "bandwidth_capacity_mbps": 1000.0,
+      "link_utilization_pct": 9.5,
+      "cpu_utilization_pct": 21.0,
+      "memory_utilization_pct": 34.0,
+      "interface_status": "up",
+      "queue_drops": 0,
+      "crc_errors": 0
+    }
+  ]
+}

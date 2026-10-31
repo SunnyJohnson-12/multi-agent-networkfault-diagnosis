@@ -1,0 +1,54 @@
+{
+  "scenario_id": "scenario_08_degraded_agent",
+  "name": "Resilience Under Agent Timeout / Failure",
+  "description": "Simulation of degraded operation where Infrastructure Agent is disabled/timed out; system degrades gracefully and notes limitation.",
+  "expected_fault": "Bandwidth and Link Congestion",
+  "incident_id": "INC-8899",
+  "disabled_agents": ["infrastructure_agent"],
+  "telemetry": [
+    {
+      "device_id": "HOSTEL_CORE_SW_01",
+      "device_name": "Hostel Zone Aggregation Switch",
+      "device_type": "switch",
+      "interface": "TenGig1/1/1",
+      "timestamp": "2026-10-31T22:00:00Z",
+      "latency_ms": 138.0,
+      "jitter_ms": 34.0,
+      "packet_loss_pct": 7.5,
+      "throughput_mbps": 9500.0,
+      "bandwidth_capacity_mbps": 10000.0,
+      "link_utilization_pct": 95.0,
+      "cpu_utilization_pct": 55.0,
+      "memory_utilization_pct": 52.0,
+      "interface_status": "up",
+      "queue_drops": 11200,
+      "crc_errors": 2,
+      "baseline": {
+        "baseline_latency_ms": 10.0,
+        "baseline_jitter_ms": 2.0,
+        "baseline_packet_loss_pct": 0.0,
+        "baseline_link_utilization_pct": 40.0,
+        "baseline_cpu_utilization_pct": 25.0,
+        "baseline_memory_utilization_pct": 45.0
+      }
+    },
+    {
+      "device_id": "HOSTEL_ACC_SW_01",
+      "device_name": "Hostel Block A Access Switch",
+      "device_type": "switch",
+      "interface": "GigabitEthernet0/1",
+      "timestamp": "2026-10-31T22:00:00Z",
+      "latency_ms": 140.0,
+      "jitter_ms": 35.0,
+      "packet_loss_pct": 7.6,
+      "throughput_mbps": 810.0,
+      "bandwidth_capacity_mbps": 1000.0,
+      "link_utilization_pct": 81.0,
+      "cpu_utilization_pct": 30.0,
+      "memory_utilization_pct": 40.0,
+      "interface_status": "up",
+      "queue_drops": 0,
+      "crc_errors": 0
+    }
+  ]
+}

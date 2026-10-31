@@ -1,0 +1,54 @@
+{
+  "scenario_id": "scenario_05_crc_degradation",
+  "name": "Data Center Optical SFP / Cable CRC Framing Degradation",
+  "description": "Dirty fiber optic patch on DC_CORE_SW_01 uplink generating 1,840 CRC errors and 8.4% packet loss despite low 22% utilization.",
+  "expected_fault": "Physical Layer Cable / CRC Framing Degradation",
+  "incident_id": "INC-5005",
+  "telemetry": [
+    {
+      "device_id": "DC_CORE_SW_01",
+      "device_name": "Data Center Leaf-Spine Gateway",
+      "device_type": "switch",
+      "interface": "FortyGig1/1",
+      "timestamp": "2026-10-31T16:00:00Z",
+      "latency_ms": 36.0,
+      "jitter_ms": 28.5,
+      "packet_loss_pct": 8.4,
+      "throughput_mbps": 8800.0,
+      "bandwidth_capacity_mbps": 40000.0,
+      "link_utilization_pct": 22.0,
+      "cpu_utilization_pct": 28.0,
+      "memory_utilization_pct": 42.0,
+      "interface_status": "up",
+      "queue_drops": 0,
+      "crc_errors": 1840,
+      "baseline": {
+        "baseline_latency_ms": 1.8,
+        "baseline_jitter_ms": 0.4,
+        "baseline_packet_loss_pct": 0.0,
+        "baseline_link_utilization_pct": 20.0,
+        "baseline_cpu_utilization_pct": 25.0,
+        "baseline_memory_utilization_pct": 40.0,
+        "baseline_crc_errors": 0
+      }
+    },
+    {
+      "device_id": "DC_SERVER_02",
+      "device_name": "Academic ERP / Moodle Server",
+      "device_type": "server",
+      "interface": "eth0",
+      "timestamp": "2026-10-31T16:00:00Z",
+      "latency_ms": 38.0,
+      "jitter_ms": 29.0,
+      "packet_loss_pct": 8.1,
+      "throughput_mbps": 420.0,
+      "bandwidth_capacity_mbps": 10000.0,
+      "link_utilization_pct": 4.2,
+      "cpu_utilization_pct": 35.0,
+      "memory_utilization_pct": 52.0,
+      "interface_status": "up",
+      "queue_drops": 0,
+      "crc_errors": 0
+    }
+  ]
+}

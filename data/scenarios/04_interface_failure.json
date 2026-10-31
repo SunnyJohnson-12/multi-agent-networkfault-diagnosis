@@ -1,0 +1,53 @@
+{
+  "scenario_id": "scenario_04_interface_failure",
+  "name": "Library Distribution Uplink Interface Down",
+  "description": "Physical link down event on LIB_DIST_SW_01 uplink isolating Library APs and endpoints.",
+  "expected_fault": "Physical Interface or Link Down Failure",
+  "incident_id": "INC-4004",
+  "telemetry": [
+    {
+      "device_id": "LIB_DIST_SW_01",
+      "device_name": "Central Library Distribution Switch",
+      "device_type": "switch",
+      "interface": "TenGig1/1/1",
+      "timestamp": "2026-10-31T14:10:00Z",
+      "latency_ms": 0.0,
+      "jitter_ms": 0.0,
+      "packet_loss_pct": 100.0,
+      "throughput_mbps": 0.0,
+      "bandwidth_capacity_mbps": 10000.0,
+      "link_utilization_pct": 0.0,
+      "cpu_utilization_pct": 19.0,
+      "memory_utilization_pct": 36.0,
+      "interface_status": "down",
+      "queue_drops": 0,
+      "crc_errors": 0,
+      "baseline": {
+        "baseline_latency_ms": 3.0,
+        "baseline_jitter_ms": 0.8,
+        "baseline_packet_loss_pct": 0.0,
+        "baseline_link_utilization_pct": 30.0,
+        "baseline_cpu_utilization_pct": 20.0,
+        "baseline_memory_utilization_pct": 35.0
+      }
+    },
+    {
+      "device_id": "LIB_AP_04",
+      "device_name": "Library 2nd Floor High-Density AP",
+      "device_type": "access_point",
+      "interface": "GigabitEthernet0/1",
+      "timestamp": "2026-10-31T14:10:00Z",
+      "latency_ms": 0.0,
+      "jitter_ms": 0.0,
+      "packet_loss_pct": 100.0,
+      "throughput_mbps": 0.0,
+      "bandwidth_capacity_mbps": 1000.0,
+      "link_utilization_pct": 0.0,
+      "cpu_utilization_pct": 15.0,
+      "memory_utilization_pct": 30.0,
+      "interface_status": "degraded",
+      "queue_drops": 0,
+      "crc_errors": 0
+    }
+  ]
+}

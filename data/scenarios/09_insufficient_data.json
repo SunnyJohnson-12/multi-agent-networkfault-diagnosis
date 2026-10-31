@@ -1,0 +1,21 @@
+{
+  "scenario_id": "scenario_09_insufficient",
+  "name": "Insufficient Telemetry Coverage",
+  "description": "Missing critical telemetry: packet loss and link utilization are absent across all monitored interfaces.",
+  "expected_fault": "Insufficient Telemetry Coverage",
+  "incident_id": "INC-9009",
+  "telemetry": [
+    {
+      "device_id": "HOSTEL_ACCESS_SW_04",
+      "device_name": "Hostel Access Switch 04",
+      "device_type": "switch",
+      "interface": "GigabitEthernet0/1",
+      "timestamp": "2026-10-31T18:00:00Z",
+      "interface_status": "up",
+      "cpu_utilization_pct": 25.0,
+      "memory_utilization_pct": 35.0,
+      "queue_drops": 0,
+      "crc_errors": 0
+    }
+  ]
+}
